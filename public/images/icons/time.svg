@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>time</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-30.8%" y="-34.0%" width="161.7%" height="175.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.519276495   0 0 0 0 0.519276495   0 0 0 0 0.519276495  0 0 0 0.268930288 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-2" transform="translate(-291.000000, -622.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="0.6">
+            <g id="Group-14" transform="translate(286.000000, 417.000000)">
+                <g id="Group-26" transform="translate(0.000000, 50.000000)">
+                    <g id="Group-25" filter="url(#filter-1)" transform="translate(0.000000, 1.000000)">
+                        <g id="Group-23" transform="translate(22.000000, 140.000000)">
+                            <g id="Group-20" transform="translate(0.000000, 23.000000)">
+                                <g id="time" transform="translate(0.000000, 1.000000)">
+                                    <path d="M6,0 C9.3084,0 12,2.6916 12,6 C12,9.3084 9.3084,12 6,12 C2.6916,12 0,9.3084 0,6 C0,2.6916 2.6916,0 6,0 Z M6,0.4 C2.9122,0.4 0.4,2.9122 0.4,6 C0.4,9.0878 2.9122,11.6 6,11.6 C9.0878,11.6 11.6,9.0878 11.6,6 C11.6,2.9122 9.0878,0.4 6,0.4 Z M6.12678999,2.1894155 C6.23718999,2.1894155 6.32678999,2.2788155 6.32678999,2.3894155 L6.32678999,2.3894155 L6.32678999,6.1894155 C6.32678999,6.3000155 6.23718999,6.3894155 6.12678999,6.3894155 L6.12678999,6.3894155 L2.92678999,6.3894155 C2.81638999,6.3894155 2.72678999,6.3000155 2.72678999,6.1894155 C2.72678999,6.0788155 2.81638999,5.9894155 2.92678999,5.9894155 L2.92678999,5.9894155 L5.92678999,5.9894155 L5.92678999,2.3894155 C5.92678999,2.2788155 6.01638999,2.1894155 6.12678999,2.1894155 Z" id="Combined-Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

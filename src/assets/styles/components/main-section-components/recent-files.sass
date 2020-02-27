@@ -1,0 +1,117 @@
+.res-file-list
+    .file
+        display: flex
+        align-items: center
+        padding: ($base-indent / 2) ($base-indent - 10px)
+        margin-bottom: $base-indent - 10px
+        background-color: $file-bg
+        border-radius: 16px
+        transition: background-color 0.2s ease
+
+        .file-ext
+            +ffam("muli-bold")
+
+            color: $white
+
+            // padding: 8px
+            width: 38px
+            height: 38px
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 10px
+            line-height: 20px
+            letter-spacing: 0.08px
+            text-transform: uppercase
+            border-radius: 10px
+            margin-right: $base-indent - 12px
+
+        &.pdf
+            .file-ext
+                background-color: $file-pdf-bg
+
+        &.png
+            .file-ext
+                background-color: $file-png-bg
+
+        &.zip
+            .file-ext
+                background-color: $file-zip-bg
+
+        h3
+            margin-right: $base-indent * 3 - 10px
+            width: 173px
+            font-size: 14px
+            color: $file-title-color
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            padding: 3px 0
+            transition: color 0.3s ease
+
+        h4, .date, .file-size
+            color: $file-members-color
+            font-size: 12px
+            transition: color 0.3s ease
+
+        h4
+            width: 77px
+            margin-right: $base-indent * 5.2 / 3
+
+        .date
+            margin-right: $base-indent + 10px
+
+        .file-size
+            width: 44px
+            text-transform: uppercase
+            margin-right: auto
+
+        .add, .share, .settings
+            width: 18px
+            height: 18px
+            margin-right: 17px
+            position: relative
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                height: 0
+                width: 0
+                transition: 0.2s ease
+                border-radius: 50%
+                background-color: rgba(179, 164, 164, 0.1)
+
+            &:hover
+                &::after
+                    width: 130%
+                    height: 130%
+
+        .settings
+            margin-right: 0
+
+        svg
+            .add-icon, .share-icon, .settings-icon
+                transition: fill 0.3s ease, stroke 0.3s ease
+
+        &.active
+            background-color: $file-active
+            box-shadow: 0 3px 14px 0 rgba(102, 114, 251, 0.49)
+
+            h3
+                color: $white
+
+            h4, .date, .file-size
+                color: $file-content-color-active
+
+            svg
+                .add-icon, .share-icon
+                    fill: $white
+                    stroke: $white
+
+                .settings-icon
+                    fill: $white

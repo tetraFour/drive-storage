@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="10px" viewBox="0 0 15 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-2" transform="translate(-1475.000000, -54.000000)" fill="#4D4D4D">
+            <g id="Group-42" transform="translate(1186.000000, 33.000000)">
+                <g id="Group-3" transform="translate(178.000000, 0.000000)">
+                    <path d="M121.152851,32.7149923 L114.219114,26.4751834 C113.926962,26.2125192 113.926962,25.7881631 114.219114,25.5248166 L121.152851,19.2850077 C121.574599,18.9049974 122.260781,18.9049974 122.683277,19.2850077 C123.105025,19.6650179 123.105025,20.281767 122.683277,20.6617772 L116.751846,26.0003411 L122.683277,31.3375405 C123.105025,31.718233 123.105025,32.3349821 122.683277,32.7149923 C122.260781,33.0950026 121.574599,33.0950026 121.152851,32.7149923" id="Arrow" transform="translate(118.500000, 26.000000) rotate(-90.000000) translate(-118.500000, -26.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

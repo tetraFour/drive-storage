@@ -1,0 +1,136 @@
+.folders
+    margin-bottom: $base-indent + 10px
+
+    .folders-list
+        display: flex
+        justify-content: space-between
+
+    .folder
+        width: 30%
+        padding: $base-indent - 10px
+        border-radius: 26px
+
+        .folder-icon
+            padding: 9px 7px
+            border-radius: 10px
+            margin-bottom: $base-indent / 3
+
+        &.red
+            background-color: $folder-red-bg
+
+            &.active
+                box-shadow: 0 7px 28px 0 rgba(#FF6147, 0.56)
+
+            .folder-icon
+                background-color: rgba(#FFA395, 0.45)
+
+            .clients
+                img, .other
+                    border-color: $folder-red-bg
+
+        &.blue
+            background-color: $folder-blue-bg
+
+            &.active
+                box-shadow: 0 7px 28px 0 rgba(#8a93fe, 0.56)
+
+            .folder-icon
+                background-color: rgba(#8F98FF, 0.52)
+
+            .clients
+                img, .other
+                    border-color: $folder-blue-bg
+
+        &.yellow
+            background-color: $folder-yellow-bg
+
+            &.active
+                box-shadow: 0 7px 28px 0 rgba(#facf83, 0.56)
+
+            .folder-icon
+                background-color: rgba(#FFD07E, 0.82)
+
+            .clients
+                img, .other
+                    border-color: $folder-yellow-bg
+
+        h3
+            color: $white
+            font-size: 16px
+            margin-bottom: $base-indent / 2
+
+            +ffam("muli-b")
+
+            letter-spacing: 0.23px
+
+        .clients
+            margin-bottom: $base-indent / 2
+            display: flex
+            align-items: center
+
+            li
+                &:not(:first-child)
+                    margin-left: -5px
+
+                img
+                    width: 26px
+                    height: 26px
+                    border-radius: 50%
+                    border: 1px solid transparent
+
+                &.other
+                    width: 26px
+                    height: 26px
+                    border-radius: 50%
+                    border: 1px solid transparent
+                    background-color: $white
+                    font-size: 10px
+                    text-align: center
+                    line-height: 25px
+
+                    &.hide
+                        display: none
+
+        .files, .date
+            color: $white
+            display: block
+            font-size: 12px
+
+            +ffam("muli-r")
+
+            letter-spacing: 0.17px
+            position: relative
+            padding-left: $base-indent - 10px
+
+            img
+                position: absolute
+                top: -10px
+                left: -15px
+
+        .files
+            margin-bottom: $base-indent / 3
+
+        .btn-settings
+            margin-top: 8px
+            float: right
+            width: 19px
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                top: 60%
+                left: 60%
+                transform: translate(-60%, -60%)
+                height: 0
+                width: 0
+                transition: 0.2s ease
+                border-radius: 50%
+                background-color: rgba(179, 164, 164, 0.1)
+
+            &:hover
+                &::after
+                    width: 140%
+                    height: 140%

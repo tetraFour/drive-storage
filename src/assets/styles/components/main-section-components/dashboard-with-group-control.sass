@@ -1,0 +1,118 @@
+.dashboard-and-control
+    margin-bottom: $base-indent * 2 - 2px
+
+    h2
+        +ffam("muli-bold")
+
+        font-size: 20px
+        letter-spacing: 0.17px
+        margin-right: auto
+        color: $base-title-color
+        line-height: 38px
+        margin-bottom: $base-indent - 10px
+
+    .control-panel
+        display: flex
+        align-items: center
+        float: right
+
+    button
+        position: relative
+
+        &.group-as-blocks
+            width: 16px
+            height: 16px
+            background: url("/images/icons/display-blocks.svg") no-repeat center
+            margin-right: $base-indent - 10px
+
+        &.group-as-list
+            width: 19px
+            height: 16px
+            background: url("/images/icons/display-list.svg") no-repeat center
+            margin-right: $base-indent - 5px
+
+        &.group-as-list, &.group-as-blocks
+            &::after
+                content: ""
+                position: absolute
+                top: 55%
+                left: 55%
+                transform: translate(-55%, -55%)
+                height: 0
+                width: 0
+                transition: 0.2s ease
+                border-radius: 50%
+                background-color: rgba(179, 164, 164, 0.1)
+
+            &:hover
+                &::after
+                    width: 170%
+                    height: 170%
+
+    .upload-file
+        +ffam("muli-bold")
+
+        padding: 11px 14px
+        background-color: $dashboard-uload-files-button-bg
+        color: $white
+        border-radius: 8px
+        display: inline-flex
+        align-items: center
+        font-size: 14px
+        letter-spacing: 0.54px
+        transition: background-color 0.2s ease
+
+        &:hover
+            background-color: $dashboard-uload-files-button-bg-hover
+
+        img
+            margin-left: 9px
+
+        &.upgraded
+            cursor: default
+            background-color: $dashboard-uload-files-button-bg-hover
+
+    #files
+        display: none
+
+    .welcome-panel
+        position: relative
+        background: url("/images/illustrations/bg-for-welcome-component.svg") no-repeat center
+        background-size: cover
+        padding: ($base-indent - 5px) ($base-indent + 5px)
+        border-radius: 20px
+
+        h1, p
+            width: 393px
+
+        h1
+            margin-bottom: $base-indent / 2
+
+            +ffam("didot")
+
+            font-size: 30px
+            color: #333539
+
+        p
+            +ffam("muli-sb")
+
+            line-height: 22px
+            font-size: 14px
+            letter-spacing: 0.54px
+            color: #4D4D4D
+            margin-bottom: $base-indent - 8px
+
+        button
+            padding: 11px ($base-indent - 2px)
+
+        .man
+            position: absolute
+            top: 33px
+            right: 72px
+
+        .plain
+            position: absolute
+            bottom: 20px
+            right: 270px
+
+            // transform: rotate(-55deg)

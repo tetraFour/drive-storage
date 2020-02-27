@@ -1,0 +1,108 @@
+.nav-menu
+    background-color: $nav-menu-bg
+    width: $nav-menu-width
+    padding: ($base-indent * 5.5 / 3) 0 ($base-indent + 5px)
+    flex: 1
+
+    nav
+        margin-bottom: $base-indent * 3
+
+    .logo
+        +ffam("didot")
+
+        margin-bottom: $base-indent * 8 / 3
+        font-size: 26px
+        color: $white
+        display: flex
+        align-items: center
+        padding-left: $base-indent * 1.5
+        font-weight: bold
+
+        img
+            width: 31px
+            height: 28px
+            margin-right: $base-indent - 10px
+
+    li
+        &:not(.logo)
+            margin-bottom: $base-indent / 3
+
+            a
+                +ffam("muli-sb")
+
+                display: flex
+                align-items: center
+                color: rgba($white, 0.7)
+                font-size: 16px
+                letter-spacing: 0.62px
+                transition: color 0.2s ease
+
+                &:hover
+                    color: rgba($white, 1)
+
+                    img
+                        opacity: 1
+
+                &.active
+                    position: relative
+
+                    img
+                        opacity: 1
+
+                    color: rgba($white, 1)
+
+                    &::before
+                        content: ""
+                        top: 0
+                        left: 0
+                        width: 5px
+                        height: 45px
+                        background-color: $white
+                        border-radius: 0 10px 10px 0
+                        position: absolute
+
+            img
+                opacity: 0.7
+                width: 50px
+                height: 50px
+                padding: $base-indent / 2 - 2px
+                margin-right: $base-indent / 2
+                margin-left: $base-indent - 5px
+                transition: opacity 0.2s ease
+
+    .storage
+        width: $nav-menu-storage-width
+        margin-left: $base-indent + 13px
+        margin-bottom: $base-indent + 5px
+
+        .info
+            display: flex
+            justify-content: space-between
+            margin-bottom: $base-indent / 3
+
+        h4
+            font-size: 12px
+            color: $white
+            display: flex
+            align-items: center
+
+            img
+                margin-right: 8px
+
+        h5
+            +ffam("muli-r")
+
+            font-size: 10px
+            color: #BABABA
+
+        .progress-bar
+            height: 6px
+            width: 100%
+            border-radius: 4px
+            background-color: $storage-empty
+            margin-bottom: 8px
+
+            .memo-used
+                height: 100%
+                border-radius: 4px
+                background-color: $storage-progress

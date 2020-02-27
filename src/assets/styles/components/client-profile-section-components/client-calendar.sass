@@ -1,0 +1,117 @@
+.calendar
+    width: $calendar-width
+    background-color: $white
+    border-radius: 16px
+    padding: 19px ($base-indent - 5px) ($base-indent / 2 - 1px)
+    margin-bottom: $base-indent - 10px
+    max-height: 50px
+    overflow: hidden
+    transition: all .2s ease
+    &.open
+        max-height: 400px
+    h2
+        line-height: 16px
+
+    .button-arrow
+        float: right
+        transition: all 0.2s ease
+        transform: scaleY(-1)
+
+        &.active
+            transform: scaleY(1)
+
+    .date-type
+        display: flex
+        border-radius: 9px
+        background-color: $calendar-data-type-bg
+        margin-bottom: $base-indent / 2
+
+        button
+            font-size: 13px
+            line-height: 16px
+            padding: 8px ($base-indent + 3px)
+
+            &.active
+                background-color: $calendar-data-type-btn-active
+                border-radius: 9px
+                color: $white
+
+    .date-control
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+
+        .prev, .next
+            width: 28px
+            height: 28px
+            border-radius: 9px
+            border: 1px solid $calendar-data-control-btn-border
+
+        .prev
+            img
+                transform: rotate(90deg)
+
+        .next
+            img
+                transform: rotate(-90deg)
+
+    .days-of-week
+        display: flex
+        justify-content: space-between
+        margin-bottom: $base-indent - 10px
+        padding: 0 6px
+
+        li
+            font-size: 12px
+            line-height: 19px
+            color: $calendar-days-of-week-color
+
+    .days
+        display: flex
+        flex-wrap: wrap
+
+        li
+            margin: 0 8px 5px
+
+            &:nth-child(7n)
+                margin-right: 0
+
+        button
+            width: 29px
+            height: 29px
+            font-size: 12px
+            line-height: 19px
+            color: $calendar-day-btn-color
+            border-radius: 9px
+            position: relative
+
+            &.prev-month
+                color: rgba(#4D4D4D, 0.32)
+
+            &.active
+                background-color: $calendar-day-btn-bg
+                color: $white
+
+            &.purple-task, &.red-task, &.yellow-task
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    bottom: -4px
+                    transform: translate(-50%, 0)
+                    width: 5px
+                    height: 5px
+                    border-radius: 50%
+                    border: 1px solid $white
+
+            &.yellow-task
+                &::before
+                    background-color: $calendar-event-task-yellow
+
+            &.red-task
+                &::before
+                    background-color: $calendar-event-task-red
+
+            &.purple-task
+                &::before
+                    background: $calendar-event-task-purple

@@ -1,0 +1,143 @@
+.client-profile-nav
+    margin-bottom: $base-indent - 5px
+
+    ul
+        display: flex
+        justify-content: flex-end
+        align-self: center
+
+        li
+            &:not(:last-child)
+                margin-right: 9px
+
+            &.notifications
+                position: relative
+
+                button
+                    &::before
+                        transition: all 0.2s ease
+                        content: ""
+                        position: absolute
+                        top: 15px
+                        right: 15px
+                        width: 6px
+                        opacity: 0
+                        height: 6px
+                        background-color: $notifications-active-bg
+                        border: 1px solid #F4F7FC
+                        border-radius: 50%
+
+                    &.has-notification
+                        &::before
+                            opacity: 1
+
+            &.tips, &.settings, &.notifications
+                position: relative
+
+                a, button
+                    &::after
+                        content: ""
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        height: 0
+                        width: 0
+                        transition: 0.2s ease
+                        border-radius: 50%
+                        background-color: rgba(179, 164, 164, 0.1)
+
+                &.active
+                    a, button
+                        &::after
+                            width: 90%
+                            height: 90%
+
+                    &.active
+                        &::after
+                            width: 90%
+                            height: 90%
+
+                &:hover
+                    a, button
+                        &::after
+                            width: 90%
+                            height: 90%
+
+            &.profile
+                button
+                    display: flex
+                    align-items: center
+                    position: relative
+                    padding-right: $base-indent / 2
+                    color: #4D4D4D
+
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: 40%
+                        right: -3px
+                        width: 11px
+                        height: 14px
+                        background: url("/images/icons/arrow.svg") no-repeat center
+                        background-size: contain
+
+                    img
+                        display: block
+                        width: 46px
+                        height: 46px
+                        border-radius: 50%
+                        margin-right: 7px
+
+            &.notifications
+                .notification-wrapper
+                    display: none
+                    z-index: 100
+                    top: 50px
+                    left: -140px
+                    border: 1px solid #B5BDCF
+
+                    button
+                        &.btn-cross
+                            float: right
+                            position: relative
+                            width: 10px
+                            height: 10px
+
+                            &::before, &::after
+                                width: 100%
+                                border: 0
+                                top: 4px
+                                right: 0
+                                left: 1px
+                                border-radius: 3px
+                                opacity: 1
+                                height: 2px
+                                background-color: $black
+
+                            &::before
+                                transform: rotate(225deg)
+
+                            &::after
+                                transform: rotate(-225deg)
+
+                    ul
+                        flex-direction: column
+
+                        li
+                            margin-right: 0
+                            margin-bottom: $base-indent / 3
+
+                            &:last-child
+                                margin-bottom: 0
+
+                &.active
+                    .notification-wrapper
+                        display: block
+
+    a, button:not(.profile-btn)
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center

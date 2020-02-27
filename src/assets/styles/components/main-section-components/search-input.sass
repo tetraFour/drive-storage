@@ -1,0 +1,24 @@
+.search
+    width: $search-input-width
+    background-color: $search-bg
+    display: flex
+    align-items: center
+    border-radius: 15px
+    margin-bottom: $base-indent - 5px
+
+    .search-icon
+        border-radius: 15px
+        background-color: rgba($search-icon-bg, 0.16)
+        padding: 15px
+        margin-right: $base-indent / 2
+
+    .search-input
+        color: rgba($black, 0.7)
+
+        &::placeholder
+            +ffam("muli-sb")
+
+            letter-spacing: 0.54px
+            font-size: 14px
+            color: #757994
+            opacity: 0.67

@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/styles/index.sass";
 
-function App() {
+import NavMenu from "./components/navMenu";
+import ClientProfile from "./components/clientProfile";
+
+import Notification from "./components/other-items/notification";
+
+function App({ children }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavMenu />
+      {children}
+      <ClientProfile />
+      <Notification />
+    </>
   );
 }
 
