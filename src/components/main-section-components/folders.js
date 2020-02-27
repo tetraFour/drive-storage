@@ -2,7 +2,7 @@ import React from "react";
 
 import FolderList from "./folders/folderList";
 
-function Folder({ toggle, setToggleClasses }) {
+function Folder({ toggle }) {
   return (
     <div className="folders clearfix">
       <button className="view-all">View All</button>
