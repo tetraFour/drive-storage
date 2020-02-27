@@ -14,7 +14,7 @@ function Notification() {
           : "notification-wrapper"
       }
     >
-      <p>Store has been updated to 1TB</p>
+      <p>Store has been updated to 500GB</p>
     </div>
   );
 }
