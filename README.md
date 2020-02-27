@@ -1,6 +1,6 @@
 ## Drive storage
 
-используемые технологии: React Create App, React Router, React Redux, Sass <br />
+используемые технологии: Create React App, React Router, React Redux, Sass <br />
 концепт-дизайн был взят из сайта: https://www.uplabs.com/posts/drive-storage-management-dashboard-concept
 
 ### для запуска проекта запустите команду: `yarn/npm i` для загрузки необходимых пакетов и `yarn start/npm run start` для запуска Dev Server'а
