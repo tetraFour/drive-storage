@@ -32,6 +32,9 @@
             margin-right: $base-indent - 5px
 
         &.group-as-list, &.group-as-blocks
+            opacity: 0.6
+            transition: opacity 0.2s ease
+
             &::after
                 content: ""
                 position: absolute
@@ -45,9 +48,14 @@
                 background-color: rgba(179, 164, 164, 0.1)
 
             &:hover
+                opacity: 1
+
                 &::after
                     width: 170%
                     height: 170%
+
+            &.active
+                opacity: 1
 
     .upload-file
         +ffam("muli-bold")

@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { actionPushNotificationToList } from "../../../store/actions";
 import SettingsWhiteIcon from "../../icons/settingsWhiteIcon";
 
-const FolderList = () => {
+const FolderList = ({ toggle }) => {
   const folders = useSelector(state => state.storage.folders);
   const dispatch = useDispatch();
   return (
     <div>
-      <ul className="folders-list">
+      <ul className={toggle ? "folders-list row" : "folders-list col"}>
         {folders.map(folder => (
           <li key={folder.id} className={folder.folderStyle}>
             <button

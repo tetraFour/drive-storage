@@ -5,6 +5,15 @@
         display: flex
         justify-content: space-between
 
+        &.row
+            flex-direction: row
+
+        &.col
+            flex-direction: column
+            .folder
+                width: 100%
+                margin-bottom: $base-indent
+
     .folder
         width: 30%
         padding: $base-indent - 10px
@@ -118,6 +127,7 @@
             align-items: center
             justify-content: center
             position: relative
+
             &::after
                 content: ""
                 position: absolute
