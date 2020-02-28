@@ -7,7 +7,7 @@ function Folder({ toggle }) {
     <div className="folders clearfix">
       <button className="view-all">View All</button>
       <h2>Folders</h2>
-      <FolderList toggle={toggle}/>
+      <FolderList toggle={toggle} />
     </div>
   );
 }

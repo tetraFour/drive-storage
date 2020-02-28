@@ -14,7 +14,6 @@ const ClientNav = () => {
     state => state.storage.notificationsList
   );
   const userPic = useSelector(state => state.storage.userPic);
-
   return (
     <nav className="client-profile-nav">
       <ul>

@@ -10,6 +10,7 @@
 
         &.col
             flex-direction: column
+
             .folder
                 width: 100%
                 margin-bottom: $base-indent
@@ -18,6 +19,7 @@
         width: 30%
         padding: $base-indent - 10px
         border-radius: 26px
+        position: relative
 
         .folder-icon
             padding: 9px 7px
@@ -144,3 +146,16 @@
                 &::after
                     width: 140%
                     height: 140%
+
+        .settings-menu
+            display: none
+            position: absolute
+            top: 50px
+            right: -20px
+            border-radius: 8px
+            padding: 8px
+            border: 1px solid #B5BDCF
+            background-color: $white
+
+            &.active
+                display: block
