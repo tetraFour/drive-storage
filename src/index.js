@@ -4,16 +4,15 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import App from "./App";
-import "./assets/styles/index.sass";
 import { routes } from "./assets/configs/route.config";
-import ErrorSection from "./components/main-partials/error";
+import reduxDevtoolConfig from "./assets/configs/reduxDevtool.config";
 import rootReducer from "./store/reducers";
 
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import App from "./App";
+import "./assets/styles/index.sass";
+import ErrorSection from "./components/main-partials/error";
+
+const store = createStore(rootReducer, reduxDevtoolConfig());
 
 ReactDOM.render(
   <Provider store={store}>
