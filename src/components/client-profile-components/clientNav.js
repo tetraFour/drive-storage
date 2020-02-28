@@ -8,10 +8,13 @@ import NotificationsList from "./notificationsList";
 import { useSelector } from "react-redux";
 
 const ClientNav = () => {
+  const [openNotification, setOpenNotification] = useState(false);
+
   const notificationsList = useSelector(
     state => state.storage.notificationsList
   );
-  const [openNotification, setOpenNotification] = useState(false);
+  const userPic = useSelector(state => state.storage.userPic);
+
   return (
     <nav className="client-profile-nav">
       <ul>
@@ -45,7 +48,7 @@ const ClientNav = () => {
         </li>
         <li className="profile">
           <button className="profile-btn">
-            <img src="/images/clients/jannie.png" alt="jannie" />
+            <img src={userPic} alt="jannie" />
             Jannie
           </button>
         </li>

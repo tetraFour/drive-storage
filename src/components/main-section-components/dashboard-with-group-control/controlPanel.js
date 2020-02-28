@@ -1,6 +1,6 @@
 import React from "react";
 
-function ControlPanel({ toggle, setToggleClasses }) { 
+function ControlPanel({ toggle, setToggleClasses }) {
   return (
     <div className="control-panel">
       <button

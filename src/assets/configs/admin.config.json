@@ -1,5 +1,6 @@
 {
   "mainUser": "Jannie",
+  "userPic": "/images/clients/jannie.png",
   "storageUsed": 27,
   "isStorageFilledUpgraded": false,
   "storageField": 100,
@@ -242,6 +243,50 @@
         "fileReceived": 10,
         "spaceLeft": 30
       }
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Review health care app with team",
+      "taskDate": {
+        "month": "Dec",
+        "day": 7,
+        "year": 2019,
+        "time": "10:00 AM"
+      },
+      "taskClients": [
+        "/images/clients/person2.png",
+        "/images/clients/person3.png"
+      ]
+    },
+    {
+      "id": 2,
+      "taskName": "Review health care app with team",
+      "taskDate": {
+        "month": "Dec",
+        "day": 7,
+        "year": 2019,
+        "time": "10:00 AM"
+      },
+      "taskClients": [
+        "/images/clients/person2.png",
+        "/images/clients/person3.png"
+      ]
+    },
+    {
+      "id": 3,
+      "taskName": "Review health care app with team",
+      "taskDate": {
+        "month": "Dec",
+        "day": 7,
+        "year": 2019,
+        "time": "10:00 AM"
+      },
+      "taskClients": [
+        "/images/clients/person2.png",
+        "/images/clients/person3.png"
+      ]
     }
   ],
   "notificationsList": []

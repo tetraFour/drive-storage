@@ -5,6 +5,9 @@ function ClientStorage() {
   const [isStorageOpen, setIsStorageOpen] = useState(true);
 
   const storageGraphInfo = useSelector(state => state.storage.storageGraphInfo);
+  const isStorageFilledUpgraded = useSelector(
+    state => state.storage.isStorageFilledUpgraded
+  );
   const storageEmpty = useSelector(state => state.storage.storageUsed);
   const storageField = useSelector(state => state.storage.storageField);
   return (
@@ -29,11 +32,23 @@ function ClientStorage() {
         </h3>
 
         <ul className="graph-positions">
-          <li>100</li>
-          <li>80</li>
-          <li>60</li>
-          <li>40</li>
-          <li>20</li>
+          {isStorageFilledUpgraded ? (
+            <>
+              <li>500</li>
+              <li>400</li>
+              <li>300</li>
+              <li>200</li>
+              <li>100</li>
+            </>
+          ) : (
+            <>
+              <li>100</li>
+              <li>80</li>
+              <li>60</li>
+              <li>40</li>
+              <li>20</li>
+            </>
+          )}
         </ul>
         <div className="graph-wrapper">
           <ul className="graph-info">
@@ -41,15 +56,33 @@ function ClientStorage() {
               <li key={graph.id}>
                 <span
                   className="uploads"
-                  style={{ height: `${graph.status.uploads}%` }}
+                  style={{
+                    height: `${
+                      isStorageFilledUpgraded
+                        ? graph.status.uploads / 5
+                        : graph.status.uploads
+                    }%`
+                  }}
                 ></span>
                 <span
                   className="received"
-                  style={{ height: `${graph.status.fileReceived}%` }}
+                  style={{
+                    height: `${
+                      isStorageFilledUpgraded
+                        ? graph.status.fileReceived / 5
+                        : graph.status.fileReceived
+                    }%`
+                  }}
                 ></span>
                 <span
                   className="left"
-                  style={{ height: `${graph.status.spaceLeft}%` }}
+                  style={{
+                    height: `${
+                      isStorageFilledUpgraded
+                        ? graph.status.spaceLeft / 5
+                        : graph.status.spaceLeft
+                    }%`
+                  }}
                 ></span>
               </li>
             ))}
