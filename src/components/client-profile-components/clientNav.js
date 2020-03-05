@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import NotificationsList from "./client-nav/notificationsList";
+import ProfileList from "./client-nav/profileList";
 
 import ClientTipsIcon from "../icons/clientTipsIcon";
 import ClientSettings from "../icons/clientSettingsIcon";
-import ClientNotifications from "../icons/clientNotificationsIcon";
-import NotificationsList from "./notificationsList";
-import { useSelector } from "react-redux";
 
 const ClientNav = () => {
+  const userPic = useSelector(state => state.storage.userPic);
+
   const [openNotification, setOpenNotification] = useState(false);
 
-  const notificationsList = useSelector(
-    state => state.storage.notificationsList
-  );
-  const userPic = useSelector(state => state.storage.userPic);
+  const [openProfileList, setOpenProfileList] = useState(false);
+
   return (
     <nav className="client-profile-nav">
       <ul>
@@ -32,24 +33,17 @@ const ClientNav = () => {
             openNotification ? "notifications active" : "notifications"
           }
         >
-          <button
-            className={notificationsList.length ? "has-notification" : ""}
-            onClick={() => setOpenNotification(!openNotification)}
-          >
-            <ClientNotifications />
-          </button>
-          {openNotification && (
-            <NotificationsList
-              openNotification={openNotification}
-              setOpenNotification={setOpenNotification}
-            />
-          )}
+          <NotificationsList
+            openNotification={openNotification}
+            setOpenNotification={setOpenNotification}
+          />
         </li>
-        <li className="profile">
-          <button className="profile-btn">
-            <img src={userPic} alt="jannie" />
-            Jannie
-          </button>
+        <li className={openProfileList ? "profile active" : "profile"}>
+          <ProfileList
+            openProfileList={openProfileList}
+            setOpenProfileList={setOpenProfileList}
+            userPic={userPic}
+          />
         </li>
       </ul>
     </nav>

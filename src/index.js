@@ -4,7 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { routes } from "./assets/configs/route.config";
+import {routes} from "./assets/configs/route.config";
 import reduxDevtoolConfig from "./assets/configs/reduxDevtool.config";
 import rootReducer from "./store/reducers";
 

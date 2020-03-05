@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
+import clickOutsideHandler from "../../../utils/clickOutsideHandler";
 
 import SettingsWhiteIcon from "../../icons/settingsWhiteIcon";
 function FolderItem({
-  id,
   folderStyle,
   icon,
   name,
@@ -11,10 +12,20 @@ function FolderItem({
   folderDate
 }) {
   const [toggleSettingsMenuClass, setToggleSettingsMenuClass] = useState(false);
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+  clickOutsideHandler(
+    menuRef,
+    buttonRef,
+    toggleSettingsMenuClass,
+    setToggleSettingsMenuClass,
+    useEffect
+  );
   return (
     <li className={folderStyle}>
       <button
         className="btn-settings"
+        ref={buttonRef}
         onClick={() => setToggleSettingsMenuClass(!toggleSettingsMenuClass)}
       >
         <SettingsWhiteIcon />
@@ -37,6 +48,7 @@ function FolderItem({
         created {`${folderDate.month} ${folderDate.day}, ${folderDate.year}`}
       </span>
       <div
+        ref={menuRef}
         className={
           toggleSettingsMenuClass ? "settings-menu active" : "settings-menu"
         }

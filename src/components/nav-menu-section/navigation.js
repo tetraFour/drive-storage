@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { routes } from "../../assets/configs/route.config";
+import {routes} from "../../assets/configs/route.config";
 
-function NavNavigation() {
+function Navigation() {
   return (
     <nav>
       <ul>
@@ -32,4 +32,4 @@ function NavNavigation() {
   );
 }
 
-export default NavNavigation;
+export default Navigation;

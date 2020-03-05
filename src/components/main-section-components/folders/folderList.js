@@ -12,7 +12,6 @@ const FolderList = ({ toggle }) => {
         {folders.map(folder => (
           <FolderItem
             key={folder.id}
-            id={folder.id}
             folderStyle={folder.folderStyle}
             icon={folder.folderIcon}
             name={folder.folderName}

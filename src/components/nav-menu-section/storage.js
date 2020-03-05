@@ -6,7 +6,7 @@ const percent = 100;
 function Storage() {
   const storageUsed = useSelector(state => state.storage.storageUsed);
   const storageField = useSelector(state => state.storage.storageField);
-  
+
   return (
     <div className="storage">
       <div className="info">
